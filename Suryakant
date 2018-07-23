@@ -4,6 +4,6 @@
 4)git commit -m "msg" ==>for commiting to local repositery
 5)git remote add origin <path> ==> for adding remote origin from your machine to Github
 6)git pull --rebase origin master ==> for fetching data from github to Local Machine
-7)git push -u origin master ==>for changing files to Github account
+7)git push -u origin master ==>for changing files to Github cmd
 
 
