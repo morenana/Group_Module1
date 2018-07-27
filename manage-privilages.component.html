@@ -1,0 +1,50 @@
+<form (ngSubmit)="myFunction()">
+
+
+   
+
+
+
+  <div class="showrolename" *ngFor="let n of priveilege">
+    <p>Role ID-  {{n.role_id}}</p>
+    <p>Roll Name-  {{n.role_name}}</p>
+
+    <!-- <h2>ngIf</h2>
+    <button (click)="show=!show">{{show ? 'hide' : 'show'}}</button>
+    <label><input #big1 type="checkbox" name="size" (change)="show=!show" >CheckBox</label> -->
+
+    <!-- <div *ngIf="show">
+        <p>
+            <label><input #big type="checkbox" name="size" (change)="0" checked>Big</label>
+            <label><input #small type="checkbox" name="size" (change)="0">Small</label>
+        </p>
+
+       <h3 *ngIf="big.checked">Big heading</h3>
+        <p *ngIf="small.checked">Small paragraph</p>
+    </div> -->
+  </div>
+
+ 
+<div clas="main"  *ngFor="let q of user;let j=index;let k=index">
+    
+  <p>{{q.MENU_NAME}}</p>
+  <p>menu={{q.MENU_ID}}</p>
+  <p>{{q.SUBMENU_ID}}</p>
+<!-- <input type="checkbox" #submenu name="submenu" id="menue{{j}}" value="{{q.SUBMENU_NAME}}" >{{q.SUBMENU_NAME}}<br> -->
+<input type="checkbox" value="{{'sm'+'/'+q.SUBMENU_ID}}" (change)="checkCheckBox($event)">{{q.SUBMENU_NAME}}
+<div class="wrapper">
+      <ul > 
+        <li *ngFor="let p of permision;let i=index;">
+        <!-- <input type="checkbox"  name="data" id="check{{i}}" ng-true-value="'1'" ng-false-value="'0'" >{{p.permision_name}}</li> -->
+        <input type="checkbox" value="{{q.SUBMENU_ID+'/'+p.permision_name}}" (change)="checkCheckBox($event)">{{p.permision_name}}
+      </ul>
+
+       
+    </div>
+  <!-- </ng-container> -->
+</div>
+<button type="submit" (click)="onSubmitClk()"    >Submit</button>
+
+</form>
+
+
